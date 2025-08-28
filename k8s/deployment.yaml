@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ws-deployment
+  namespace: workshop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: websocket-app
+  template:
+    metadata:
+      labels:
+        app: websocket-app
+    spec:
+      containers:
+      - name: ws-container
+        image: vkothiya77/demo-private:v1
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "250m"
+      imagePullSecrets:
+      - name: registry-auth
