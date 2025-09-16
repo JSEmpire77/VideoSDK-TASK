@@ -1,4 +1,4 @@
-# DevOps Intern Task - WebSocket Server with Load Testing
+# DevOps Associate Task - WebSocket Server with Load Testing
 
 ## Overview
 
