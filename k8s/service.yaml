@@ -8,6 +8,7 @@ spec:
   - port: 80   # service port
     targetPort: 8080  # container port
     protocol: TCP
+    name: http    // mesion to tell service monitor to use this..
   type: ClusterIP
   selector:
     app: websocket-app
