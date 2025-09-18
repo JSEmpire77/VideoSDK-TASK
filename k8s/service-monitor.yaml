@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ws-servicemonitor
+  namespace: workshop   # you put it in the same namespace as your service
+  labels:
+    release: prometheus   # <-- must match Prometheus Operator's `serviceMonitorSelector` label from promethus.yaml
+spec:
+  selector:
+    matchLabels:
+      app: websocket-app   # must match the labels on your Service
+  namespaceSelector:
+    matchNames:
+      - workshop
+  endpoints:
+    - port: http           # name of the port in the Service spec
+      path: /metrics       # path your app exposes metrics on
+      interval: 30s
