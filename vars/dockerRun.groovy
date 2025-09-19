@@ -11,6 +11,7 @@ def call(String DockerHubUser, String ImageTag ,String ProjectName){
     }
 
   echo "Deploying container with tag ${ImageTag}"
-  sh "docker run -d -p 8080:8080 --name=ws ${DockerHubUser}/${ProjectName}:${ImageTag}"
+  sh "docker run -d -p 9090:8080 --name=ws ${DockerHubUser}/${ProjectName}:${ImageTag}"
 }
+
 
