@@ -16,3 +16,8 @@ spec:
     - port: http           # name of the port in the Service spec
       path: /metrics       # path your app exposes metrics on
       interval: 30s
+
+
+# kubectl get prometheus -n monitoring prometheus-stack-kube-prom-prometheus -o yaml | grep -A5 serviceMonitorSelector
+# kubectl logs -n monitoring deploy/prometheus-stack-kube-prom-operator - this will show if service monier is rejecting then..
+

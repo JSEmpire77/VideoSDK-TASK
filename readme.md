@@ -39,4 +39,3 @@ The server will be available at `ws://localhost:8080`
 k6 run loadtest/websocket-test.js
 ```
 
-For questions or issues, please reachout to HR.
