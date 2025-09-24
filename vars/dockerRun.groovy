@@ -9,7 +9,7 @@ def call(String DockerHubUser, String ImageTag ,String ProjectName){
         echo "Old container with tag ${oldTag} found. Removing..."
         sh "docker rm -f ws} || true"
     }
-  sh "docker rm -f ws} || true"
+  sh "docker rm -f ws || true"
   echo "Deploying container with tag ${ImageTag}"
   sh "docker run -d -p 9091:8080 --name=ws ${DockerHubUser}/${ProjectName}:${ImageTag}"
 }
