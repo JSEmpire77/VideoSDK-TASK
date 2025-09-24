@@ -45,7 +45,7 @@ curl -s 127.0.0.1:9090/api/v1/targets \
   | jq -r '.data.activeTargets[]
     | select(.labels.service=="ws-svc")
     | {job: .labels.job, service: .labels.service, namespace: .labels.namespace, scrapeUrl: .scrapeUrl, health: .health, lastScrape: .lastScrape}'
-    ```
+```
 
 # all up targets 
 ```bash
@@ -53,7 +53,7 @@ curl -s 127.0.0.1:9090/api/v1/targets \
   | jq -r '.data.activeTargets[]
     | select(.health == "up")
     | {job: .labels.job, service: .labels.service, namespace: .labels.namespace, scrapeUrl: .scrapeUrl, health: .health, lastScrape: .lastScrape}'
-    ```
+```
 
 # all down targets
 ```bash
@@ -61,6 +61,6 @@ curl -s 127.0.0.1:9090/api/v1/targets \
   | jq -r '.data.activeTargets[]
     | select(.health == "down")
     | {job: .labels.job, service: .labels.service, namespace: .labels.namespace, scrapeUrl: .scrapeUrl, health: .health, lastScrape: .lastScrape}'
-    ```
+```
 
 
