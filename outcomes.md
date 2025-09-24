@@ -12,9 +12,6 @@
 1. Containerize application using docker
 2. Deployment using k8s
 3. Monitoring and Observability Dashboard using grafana+prometheus
-4. short 2-3 min of video of explanation
-
-_we are not expecting to complete all of the steps mentioned above. if you are able to complete one outcome that is completely fine._
 
 ## Expected Future Project Structure
 
@@ -71,5 +68,3 @@ includes a comprehensive Grafana dashboard with:
 - **Connection Persistence**: Verify connections don't drop during scaling
 - **Auto-scaling Triggers**: Confirm HPA activates under load
 - **Graceful Scaling**: Monitor connection handling during scale events
-
-For questions or issues, please reachout to HR.
