@@ -8,8 +8,25 @@ spec:
   - port: 80   # service port
     targetPort: 8080  # container port
     protocol: TCP
-    name: http    // mesion to tell service monitor to use this..
+    name: http    # mesion to tell service monitor to use this..
   type: ClusterIP
+  selector:
+    app: websocket-app
+
+--------------------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ws-svc
+  namespace: workshop
+spec:
+  ports:
+  - port: 80   # service port
+    targetPort: 8080  # container port
+    protocol: TCP
+    name: http    # mesion to tell service monitor to use this..
+  type: NodePort
   selector:
     app: websocket-app
 
